@@ -1,0 +1,127 @@
+.Card{
+    // background-color: var(--secondary-color);
+    background-color: white;
+    flex: 1;
+    flex-basis: 280px;
+    max-width: 400px;
+    height:450px;
+    box-shadow: 0px 0px 2px var(--secondary-color);
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    &_img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 55%;
+        background-color: white;
+        border-radius: 20px;
+        img{
+            height: 150px;
+        }
+    }
+    &_desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 45%;
+        align-items: flex-start;
+        padding: 15px;
+        .desc_top{
+            display: flex;
+            justify-content: space-between;
+            color: var(--primary-color);
+            width: 100%;
+            h1{
+                width: 80%;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: start;
+            }
+            h2{
+                font-size: 15px;
+                font-weight: 400;
+                width: 20%;
+                text-align: end;
+            }
+        }
+        p{
+            padding: 12px 0px;
+            opacity: 0.5;
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+        .rating{
+            color: var(--primary-color);
+        }
+        .btn{
+            width: 100%;
+            margin: 10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40%;
+                height: 40px;
+                background-color: var(--primary-color);
+                border: 1px solid var(--primary-color);
+                border-radius: 12px;
+                outline: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--secondary-color);
+                    color: var(--primary-color);
+                    transition: all 0.2 ease;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px){
+    .Card{
+        height: 220px;
+        // width: 100px;
+        // max-width:145px;
+        min-width: 120px;
+        flex-basis: 240px;
+        border-radius: 8px;
+        &_img{
+            height: 50%;
+            border-radius: 8px;
+            img{
+                width: 50px;
+                height: auto;
+            }
+        }
+        &_desc{
+            height: 50%;
+            .desc_top{
+                h1{
+                    font-size: 8px;
+                }
+                h2{
+                    font-size: 8px;
+                }
+            }
+            p{
+                font-size: 8px;
+                padding:3px 0px;
+            }
+            .rating{
+                font-size: 10px;
+            }
+            .btn{
+                margin: 5px 0px;
+                button{
+                    height: 20px;
+                    border-radius: 5px;
+                    font-size: 8px;
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.Form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    &_content{
+        height: 800px;
+        width: 50%;
+        position: relative;
+        z-index: 800;
+        min-width: 370px;
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        .Form_header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            h1{
+                font-weight: 400;
+            }
+        }
+        form{
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            .inputs{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                margin: 10px 0px;
+                label{
+                    margin: 10px 0px;
+                }
+                select,input{
+                    padding: 10px;
+                    border-radius: 5px;
+                    height: 40px;
+                    outline: none;
+                    border: 1px solid grey;
+                    width: 100%;
+                }
+            }
+            .split{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .split>*{
+                width: 30%;
+            }
+            .btn{
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                button{
+                    width: 30%;
+                    height: 50px;
+                    border: 1px solid grey;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    &:nth-child(2){
+                        background-color: var(--secondary-color);
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.Box{
+    height: 150px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 12px 0px;
+    .img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        flex: 1.25;
+        img{
+            width: 50%;
+        }
+    }
+    .Box_desc{
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        text-align: start;
+        flex: 3;
+
+        h1{
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--secondary-color);
+        }
+        p{
+            margin:10px 0px;
+            opacity: 0.5;
+        }
+    }
+    .quantity{
+        flex: 1.5;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            width: 30px;
+            font-size: 20px;
+            height: 30px;
+            border:1px solid grey;
+            background-color: white;
+            color: var(--secondary-color);
+            cursor: pointer;
+        }
+        p{
+            margin: 12px;
+            font-size: 20px;
+            color: var(--secondary-color);
+        }
+    }
+    .price{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            color: var(--secondary-color);
+            font-size: 20px;
+            opacity: 0.8;
+        }
+    }
+    .total_amount{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            color: var(--secondary-color);
+            font-size: 20px;
+            opacity: 0.9;
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .Box{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        .img{
+            justify-content: flex-start;
+            flex: 1;
+            margin: 12px 0px;
+            img{
+                width: 30%;
+            }
+        }
+        .Box_desc{
+            justify-content: flex-start;
+            width: 100%;
+            h1{
+                font-size: clamp(16px,3vw,20px);
+            }
+            p{
+                font-size: clamp(13px,2vw,15px);
+            }
+        }
+        .quantity{
+            align-self: flex-start;
+        }
+        .price{
+            display: none;
+        }
+        .total_amount{
+            margin: 12px 0px;
+            align-self: flex-start;
+        }
+    }
+}

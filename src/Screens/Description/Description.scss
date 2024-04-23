@@ -1,0 +1,165 @@
+body{
+    min-height: 100vh;
+    width:100vw;
+    background-color: var(--primary-color);
+}
+.Description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 80%;
+    .Desc_img{
+        height: 100%;
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        img{
+            width:clamp(15vw,20vw,25vw);
+        }
+    }
+    .Desc_details{
+        display: flex;
+        align-items: flex-start;
+        justify-content:space-evenly;
+        flex-direction: column;
+        width: 45%;
+        height: 100%;
+        color: var(--secondary-color);
+        .back{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .Desc_main{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            h1{
+                text-align: start;
+                line-height: 50px;
+                letter-spacing: 1px;
+            }
+            h2{
+                opacity: 0.5;
+                font-size:18px;
+                margin: 12px 0px;
+                font-weight: 300;
+            }
+            p{
+                text-align: start;
+                opacity: 0.5;
+            }
+        }
+        .Count{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .Count_pro{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+                p{
+                    margin: 0px 20px;
+                }
+            }
+            .Count_desc{
+                text-align: start;
+                font-size: 12px;
+                width: 80px;
+                line-height: 25px;
+                margin:0px 20px;
+                span{
+                    color: rgb(124, 0, 0);
+                }
+            }
+        }
+        .Desc_main>*{
+            padding: 10px 0px;
+        }
+        .price{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            h3{
+                font-size: 20px;
+                font-weight: 300;
+                padding:10px 0px;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 200;
+
+            }
+        }
+        .btns{
+            display: flex;
+            button{
+                background-color: var(--primary-color);
+                color: var(--secondary-color);
+                outline: none;
+                border: 1px solid var(--secondary-color);
+                padding: 12px 20px;
+                margin: 0px 20px 0px 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--secondary-color);
+                    color: var(--primary-color);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+        .extras{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .Free{
+                display: flex;
+                align-items: center;
+                h5{
+                    font-size: 15px;
+                    color: var(--secondary-color);
+                    margin:0px 12px;
+                }
+            }
+            p{
+                margin: 10px 0px;
+                font-size: 12px;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px){
+    .Description{
+        flex-direction: column;
+        .Desc_img{
+            min-height: 50vh;
+            width: 100%;
+            img{
+                width: 40vw;
+            }
+        }
+        .Desc_details{
+            width: 100%;
+            min-height: 100vh;
+            .Desc_main{
+                h1{
+                    font-size: 25px;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+}
