@@ -8,7 +8,7 @@ const LoginPage = ()=>{
     const [password, setPassword] = useState('');
     function handleSubmit(event){
         // event.preventDefault();
-        axios.post('http://localhost:5000/api/login', {email, password})
+        axios.post('http://localhost:5001/api/login', {email, password})
         .then(res=>console.log(res))
         .catch(err=>console.log("ERR from catch", err))
     }

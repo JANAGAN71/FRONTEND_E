@@ -17,7 +17,7 @@ const Cart = () =>{
     const Cart = useSelector(state=>state.Cart.items);
     const total_count = useSelector(state=>state.Cart.totalCount);
     const total_amount = useSelector(state=>state.Cart.totalAmount);
-    console.log("CARTTT", Cart, Cart[0].price + Cart[1].price);
+    // console.log("CARTTT", Cart, Cart[0].price + Cart[1].price);
     let tot_Price = 0;
     Cart.forEach(element => {
         console.log("p", element.price, element.count);
@@ -30,11 +30,11 @@ const Cart = () =>{
     // }
     const handleSubmit = (e) =>{
         e.preventDefault();
-        Swal.fire(
-            'Order placed!',
-            'BUY THINK GROW!',
-            'success'
-        )
+        Swal.fire({
+            title: "Payment Successful!",
+            text: "We will deliver your product soon!",
+            icon: "success"
+          });
         setTimeout(()=>{
             navigate('/Ecommerce');
         },2000)
@@ -100,9 +100,10 @@ const Cart = () =>{
                             <label htmlFor="">Card Holder Name:</label>
                             <input required type="text" placeholder="Enter CardHolder Name"/>
                         </div>
-                        <div className="line"></div>
+                        {/* <div className="line"></div> */}
                         <div className="Order_bottom">
                             <h1>Total Cost: ${total_amount}</h1>
+                            
                             <GooglePayButton
                             environment="TEST"
                             buttonSizeMode="static"

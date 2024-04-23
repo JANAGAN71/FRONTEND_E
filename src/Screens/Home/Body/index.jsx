@@ -55,13 +55,18 @@ const Body = ({setPop}) =>{
             </div>
             <div className="line"></div>
             {
-                (Products.length>0)?
+                (Products.length>0 && Products!=="cannot get")?
                 <div className="Container">
                     {
                         (Products)?.map((product)=>
                         <Card product={product} key={product.id}/>
                         )
                     }
+                </div>
+                :
+                (Products==="cannot get")?
+                <div className="Container">
+                    <h1>Cannot get products</h1>
                 </div>
                 :
                 <Preloader/>
